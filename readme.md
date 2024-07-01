@@ -1,33 +1,19 @@
-# Voting System Smart Contract
+# TimeCapsule Smart Contract
 
-## Overview
+The TimeCapsule contract allows users to store messages securely on the blockchain. These messages are tied to the sender's address and can only be retrieved after a specified time has passed since they were deposited.
 
-This smart contract enables a simple voting system where participants can vote for candidates. Each participant can vote only once, and the contract tracks the vote counts for each candidate.
+## Features
 
-## Key Features
+- **Secure Storage**: Messages are stored on the blockchain, ensuring they remain secure and tamper-proof.
+- **Time-Locked Retrieval**: Users can set a time lock on their messages, which prevents them from being accessed until the specified time has elapsed.
+- **Ownership Control**: Only the contract owner can retrieve messages, adding an extra layer of security.
 
-- **Voting Mechanism**: Participants can cast their vote for a candidate by invoking the `vote` function.
-- **Unique Voting**: Ensures each participant can vote only once through the `onlyOncePerPerson` modifier.
-- **Vote Counting**: Automatically increments the vote count for the selected candidate.
-- **Event Logging**: Logs the voter's address and the candidate index whenever a vote is cast.
+## Getting Started
 
-## Usage
+To get started with the TimeCapsule contract, you'll need to have Node.js installed along with the Solidity compiler (`solc`). Follow these steps to deploy and interact with the contract:
 
-1. **Deploy the Contract**: Deploy the contract to a blockchain network of your choice.
-2. **Add Candidates**: The contract initially contains two candidates. Modify the constructor to add more candidates as needed.
-3. **Vote**: To vote, call the `vote` function with the index of the candidate you wish to vote for. Ensure you haven't voted before.
-
-## Code Structure
-
-- **Mappings and Arrays**: Tracks voters and stores candidate information.
-- **Modifiers**: Enforces the one-vote-per-person rule.
-- **Events**: Logs vote actions.
-
-## Security Considerations
-
-- Validate input parameters in the `vote` function to prevent out-of-bounds errors.
-- Ensure the contract's constructor initializes candidates correctly.
-
-## Deployment
-
-Deployment instructions will vary depending on the blockchain network and tools used. Ensure you have the necessary permissions and setup to deploy smart contracts on your chosen network.
+1. Clone the repository containing the contract.
+2. Install dependencies using npm or yarn.
+3. Compile the contract using the Solidity compiler.
+4. Deploy the contract to a testnet or mainnet.
+5. Interact with the contract by calling its functions.
