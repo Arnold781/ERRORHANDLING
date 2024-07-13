@@ -1,19 +1,37 @@
-# TimeCapsule Smart Contract
+# BowlingGame Contract
 
-The TimeCapsule contract allows users to store messages securely on the blockchain. These messages are tied to the sender's address and can only be retrieved after a specified time has passed since they were deposited.
+## Overview
+
+This Solidity contract implements a simple bowling game where players can roll a ball and record their scores. The contract uses `assert`, `revert`, and `require` for error handling to ensure the game operates correctly and securely.
 
 ## Features
 
-- **Secure Storage**: Messages are stored on the blockchain, ensuring they remain secure and tamper-proof.
-- **Time-Locked Retrieval**: Users can set a time lock on their messages, which prevents them from being accessed until the specified time has elapsed.
-- **Ownership Control**: Only the contract owner can retrieve messages, adding an extra layer of security.
+- **Roll a Ball**: Players can roll a ball and record the number of pins knocked down.
+- **Calculate Score**: The contract calculates the score based on the rolls.
+- **Error Handling**: The contract uses `assert`, `revert`, and `require` for different error-handling scenarios.
 
 ## Getting Started
 
-To get started with the TimeCapsule contract, you'll need to have Node.js installed along with the Solidity compiler (`solc`). Follow these steps to deploy and interact with the contract:
+### Installation
 
-1. Clone the repository containing the contract.
-2. Install dependencies using npm or yarn.
-3. Compile the contract using the Solidity compiler.
-4. Deploy the contract to a testnet or mainnet.
-5. Interact with the contract by calling its functions.
+No specific installation is required. This contract can be deployed to any Ethereum-compatible blockchain.
+
+### Deployment
+
+Deploy the contract using tools like Hardhat, Foundry, or Remix.
+
+#### Steps to Deploy
+
+1. **Compile the Contract**:
+   Ensure you have the Solidity compiler installed and compile the contract.
+
+   ```sh
+   npx hardhat compile
+   
+### Deploy the Contract:
+Use your preferred tool to deploy the contract. For example, with Hardhat:
+
+```sh
+npx hardhat run scripts/deploy.js --network <network-name>
+```
+Replace <network-name> with your target network (e.g., mainnet, sepolia).
