@@ -27,7 +27,7 @@ contract BowlingGame {
         _;
     }
 
-    function roll(uint256 pins) external onlyOwner gameNotOver {
+    function roll(uint256 pins) external gameNotOver {
         if(pins > 10) {
             revert("Invalid number of pins");
         }
